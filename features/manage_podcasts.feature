@@ -58,7 +58,6 @@ Feature: Podcasts
   Scenario: Delete Podcast
     Given I only have podcasts titled UniqueTitleOne
     When I follow "Podcasts"
-    And I grab a screenshot
     And I follow "Remove this podcast forever"
     Then I should see "'UniqueTitleOne' was successfully removed."
     And I should have 0 podcasts
