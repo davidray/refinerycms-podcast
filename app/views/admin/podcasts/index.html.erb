@@ -34,7 +34,7 @@
       <%= link_to t('.create_new'), new_admin_podcast_url,
                    :class => "add_icon" %>
     </li>
-  <% if !searching? and podcast.count > 1 and Admin::PodcastsController.sortable? %>
+  <% if !searching? and Podcast.count > 1 and Admin::PodcastsController.sortable? %>
     <li>
       <%= link_to t('.reorder', :what => "podcasts"),
                    admin_podcasts_url,
