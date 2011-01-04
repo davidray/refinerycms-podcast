@@ -22,7 +22,7 @@
 </div>
 <div id='actions'>
   <ul>
-    <% if Admin::podcastsController.searchable? %>
+    <% if Admin::PodcastsController.searchable? %>
       <li>
         <%= render :partial => "/shared/admin/search",
                     :locals => {
@@ -34,7 +34,7 @@
       <%= link_to t('.create_new'), new_admin_podcast_url,
                    :class => "add_icon" %>
     </li>
-  <% if !searching? and podcast.count > 1 and Admin::podcastsController.sortable? %>
+  <% if !searching? and podcast.count > 1 and Admin::PodcastsController.sortable? %>
     <li>
       <%= link_to t('.reorder', :what => "podcasts"),
                    admin_podcasts_url,
