@@ -53,4 +53,4 @@
 <%= render :partial => "/shared/admin/make_sortable",
             :locals => {
               :tree => false
-            } if !searching? and podcast.count > 1 %>
+            } if !searching? and Podcast.count > 1 %>
