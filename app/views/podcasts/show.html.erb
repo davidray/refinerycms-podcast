@@ -2,6 +2,8 @@
   <%= @podcast.title %>:<%= @podcast.subtitle %>
 <% end %>
 
+<%= javascript_include_tag "swfobject" %>
+
 <% content_for :body_content_left do %>
   
   <section>
@@ -21,7 +23,7 @@
   <section>
     <h1>Listen Now</h1>
 <p>     <%if @podcast.file%>
-				<%= link_to 'listen now', @podcast.file.url %>
+          <%= player(:file => @podcast.file.url) %>
         <%end%>
 </p>
   </section>
