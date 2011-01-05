@@ -18,7 +18,7 @@
 <% content_for :body_content_right do %>
   <section>
     <%if @podcast.file%>
-      <%= player(:file => @podcast.file.url) %>
+      <%= player(:file => @podcast.file.url, :plugins => "gapro-1&gapro.accountid=UA-20289850-1") %>
     <%end%>
   </section>
 <% end %>
