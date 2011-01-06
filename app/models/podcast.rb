@@ -5,6 +5,7 @@ class Podcast < ActiveRecord::Base
   validates :title, :presence => true, :uniqueness => true
   
   belongs_to :file, :class_name => 'Resource'
+  belongs_to :photo, :class_name => 'Image'
   
   default_scope :order => "published DESC"
 

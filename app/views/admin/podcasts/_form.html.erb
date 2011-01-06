@@ -17,6 +17,16 @@
     </div>
 
     <div class='field'>
+      <%= f.label :photo -%>
+      <%= render :partial => "/shared/admin/image_picker", :locals => {
+        :f => f,
+        :field => :photo_id,
+        :image => @podcast.photo,
+        :toggle_image_display => false
+      } %>
+    </div>
+    
+    <div class='field'>
       <span class='label_with_help'>
         <%= f.label :file, 'Podcast file' -%>
         <%= refinery_help_tag "Supported file formats include .m4a, .mp3, .mov, .mp4, .m4v, and .pdf" %>
