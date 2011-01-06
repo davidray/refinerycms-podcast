@@ -6,8 +6,6 @@
   by <%=raw @podcast.author %>
 <% end %>
 
-<%= javascript_include_tag "swfobject" %>
-
 <% content_for :body_content_left do %>
   <section>
     <%=raw @podcast.summary %>
@@ -18,7 +16,7 @@
 <% content_for :body_content_right do %>
   <section>
     <%if @podcast.file%>
-      <%= player({:file => @podcast.file.url, :plugins => "gapro-1&gapro.accountid=UA-20289850-1&vidrate-1"}, {:skin => "comet"}) %>
+      <%= link_to "Listen", @podcast.file.url %>
     <%end%>
   </section>
 <% end %>
