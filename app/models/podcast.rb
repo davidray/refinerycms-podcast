@@ -6,6 +6,7 @@ class Podcast < ActiveRecord::Base
   
   belongs_to :file, :class_name => 'Resource'
   belongs_to :photo, :class_name => 'Image'
+  has_many :author_resources, :as => :favoriteable, :dependent => :destroy
   
   default_scope :order => "published DESC"
 
