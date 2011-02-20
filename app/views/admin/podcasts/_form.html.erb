@@ -13,16 +13,6 @@
       <%= f.label :subtitle -%>
       <%= f.text_field :subtitle, :size => 100 -%>
     </div>
-
-    <div class='field'>
-      <%= f.label :photo -%>
-      <%= render :partial => "/shared/admin/image_picker", :locals => {
-        :f => f,
-        :field => :photo_id,
-        :image => @podcast.photo,
-        :toggle_image_display => false
-      } %>
-    </div>
     
     <div class='field'>
       <span class='label_with_help'>
