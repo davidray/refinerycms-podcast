@@ -5,6 +5,7 @@ Gem::Specification.new do |s|
   s.description       = 'Ruby on Rails Podcasts engine for Refinery CMS'
   s.date              = '2010-12-28'
   s.summary           = 'Podcasts engine for Refinery CMS'
+  s.authors           = ["David Jones"]
   s.require_paths     = %w(lib)
   s.files             = Dir['lib/**/*', 'config/**/*', 'app/**/*']
 end
