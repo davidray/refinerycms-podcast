@@ -7,4 +7,7 @@ Gem::Specification.new do |s|
   s.summary           = 'Podcasts engine for Refinery CMS'
   s.require_paths     = %w(lib)
   s.files             = Dir['lib/**/*', 'config/**/*', 'app/**/*']
+
+  #dependencies
+  s.add_dependency('acts-as-taggable-on', '~>2.1.0')
 end
