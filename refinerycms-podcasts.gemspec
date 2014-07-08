@@ -8,4 +8,7 @@ Gem::Specification.new do |s|
   s.authors           = ["David Jones"]
   s.require_paths     = %w(lib)
   s.files             = Dir['lib/**/*', 'config/**/*', 'app/**/*']
+
+  #dependencies
+  s.add_dependency('acts-as-taggable-on', '~>2.1.0')
 end
